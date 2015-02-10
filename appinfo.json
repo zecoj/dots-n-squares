@@ -1,0 +1,47 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "Ben Nguyen",
+    "longName": "dots-n-squares",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/date_foreground.png",
+                "name": "DATE_FOREGROUND",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/digits_background.png",
+                "name": "DIGITS_BACKGROUND",
+                "type": "png"
+            },
+            {
+                "characterRegex": "[a-zA-Z 0-9]",
+                "file": "fonts/imagine.ttf",
+                "name": "IMAGINE_20",
+                "type": "font"
+            },
+            {
+                "characterRegex": "[0-9:]",
+                "file": "fonts/imagine.ttf",
+                "name": "IMAGINE_48",
+                "type": "font"
+            },
+            {
+                "file": "images/battery_bar.png",
+                "name": "BATT_BAR",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "dots-n-squares",
+    "uuid": "7bae79e6-dfa7-4b18-9922-d5ab09a3cbc0",
+    "versionCode": 1,
+    "versionLabel": "1.1",
+    "watchapp": {
+        "watchface": true
+    }
+}
