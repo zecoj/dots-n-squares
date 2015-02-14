@@ -1,13 +1,25 @@
 {
-    "appKeys": {},
+    "appKeys": {
+        "bluetooth": 1,
+        "colour": 0,
+        "icon": 3,
+        "weather": 2
+    },
     "capabilities": [
-        ""
+        "location",
+        "configurable"
     ],
     "companyName": "Ben Nguyen",
     "longName": "dots-n-squares",
     "projectType": "native",
     "resources": {
         "media": [
+            {
+                "file": "fonts/imaginez.ttf",
+                "name": "IMAGINE_16",
+                "trackingAdjust": 1,
+                "type": "font"
+            },
             {
                 "file": "images/date_foreground.png",
                 "name": "DATE_FOREGROUND",
@@ -19,7 +31,7 @@
                 "type": "png"
             },
             {
-                "characterRegex": "[a-zA-Z 0-9]",
+                "characterRegex": "[A-z 0-9]",
                 "file": "fonts/imagine.ttf",
                 "name": "IMAGINE_20",
                 "type": "font"
@@ -40,7 +52,7 @@
     "shortName": "dots-n-squares",
     "uuid": "7bae79e6-dfa7-4b18-9922-d5ab09a3cbc0",
     "versionCode": 1,
-    "versionLabel": "1.1",
+    "versionLabel": "1.2",
     "watchapp": {
         "watchface": true
     }
