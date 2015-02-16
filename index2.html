@@ -108,9 +108,9 @@
 			</fieldset>
 			<br />
 			<fieldset>
-				<legend>Language:</legend>
+				<legend>Language: (contact me to add your languages)</legend>
 				<div class="radio">
-					<select>
+					<select name="lang">
 						<option value="de">Deutsche</option>
 						<option value="en" selected >English</option>
 						<option value="es">Español</option>
@@ -153,7 +153,8 @@
 				colour:		params.colour,
 				bluetooth:	params.bluetooth,
 				temp_unit:	params.temp_unit,
-				weather:	params.weather
+				weather:	params.weather,
+				lang:           params.lang
 			}
 			return options;
 		}
@@ -176,6 +177,11 @@
 					$form.find('[name="weather"]').filter(function(i, btn) {
 						return btn.value === opts.weather;
 					}).prop('checked', true);
+				}
+				if (opts.lang) {
+					$form.find('[name="lang"]').filter(function(i, btn) {
+						return btn.value === opts.lang;
+					}).prop('selected', true);
 				}
 				if (opts.temp_unit) {
 					$form.find('[name="temp_unit"]').filter(function(i, btn) {
