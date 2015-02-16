@@ -181,7 +181,7 @@
 				if (opts.lang) {
 					$form.find('[name="lang"]').filter(function(i, btn) {
 						return btn.value === opts.lang;
-					}).prop('selected', true);
+					}).prop('selected', 'selected');
 				}
 				if (opts.temp_unit) {
 					$form.find('[name="temp_unit"]').filter(function(i, btn) {
