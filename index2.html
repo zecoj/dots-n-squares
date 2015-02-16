@@ -112,7 +112,7 @@
 				<div>
 					<select name="lang">
 						<option value="de">Deutsche</option>
-						<option value="en" selected >English</option>
+						<option value="en" selected="selected" >English</option>
 						<option value="es">Español</option>
 						<option value="fr">Français</option>
 						<option value="pt">Português</option>
@@ -179,10 +179,9 @@
 					}).prop('checked', true);
 				}
 				if (opts.lang) {
-
 					$form.find('[name="lang"]').filter(function(i, btn) {
 						return btn.value === opts.lang;
-					}).attr('selected', true);
+					}).prop('selected', true);
 				}
 				if (opts.temp_unit) {
 					$form.find('[name="temp_unit"]').filter(function(i, btn) {
