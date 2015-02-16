@@ -109,7 +109,7 @@
 			<br />
 			<fieldset>
 				<legend>Language: (contact me to add your languages)</legend>
-				<div class="radio">
+				<div>
 					<select name="lang">
 						<option value="de">Deutsche</option>
 						<option value="en" selected >English</option>
@@ -179,9 +179,14 @@
 					}).prop('checked', true);
 				}
 				if (opts.lang) {
-					$form.find('[name="lang"]').filter(function(i, btn) {
+					/*$form.find('[name="lang"]').filter(function(i, btn) {
 						return btn.value === opts.lang;
+					}).prop('selected', true);*/
+					//$('select[name="lang"]').find('option[value="3"]').attr("selected",true);
+					$('[name=lang] option').filter(function() { 
+    						return ($(this).val() == opts.lang;
 					}).prop('selected', true);
+
 				}
 				if (opts.temp_unit) {
 					$form.find('[name="temp_unit"]').filter(function(i, btn) {
