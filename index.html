@@ -107,7 +107,21 @@
 				</div>
 			</fieldset>
 			<br />
-
+			<fieldset>
+				<legend>Language:</legend>
+				<div>
+					<select name="lang">
+						<option name="lang" value="de">Deutsche *</option>
+						<option name="lang" value="en" selected >English</option>
+						<option name="lang" value="es">Español </option>
+						<option name="lang" value="fr">Français</option>
+						<option name="lang" value="pt">Português</option>
+						<option name="lang" value="sk">Slovenčina</option>
+					</select>
+					<p><em><small>*: Incompleted languages (date only, weather in English). Contact me to help adding your language(s)</small></em>
+				</div>
+			</fieldset>
+			<br />
 			<fieldset>
 				<legend>Confirm:</legend>
 				<!--
@@ -141,7 +155,8 @@
 				colour:		params.colour,
 				bluetooth:	params.bluetooth,
 				temp_unit:	params.temp_unit,
-				weather:	params.weather
+				weather:	params.weather,
+				lang:           params.lang
 			}
 			return options;
 		}
@@ -164,6 +179,11 @@
 					$form.find('[name="weather"]').filter(function(i, btn) {
 						return btn.value === opts.weather;
 					}).prop('checked', true);
+				}
+				if (opts.lang) {
+					$form.find('select [name="lang"]').filter(function(i, btn) {
+						return btn.value === opts.lang;
+					}).prop('selected', true);
 				}
 				if (opts.temp_unit) {
 					$form.find('[name="temp_unit"]').filter(function(i, btn) {
